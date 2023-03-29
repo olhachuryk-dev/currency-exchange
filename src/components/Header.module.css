@@ -1,0 +1,29 @@
+.header {
+  background-color: var(--background-color-semi-transparent);
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  height: 3rem;
+  position: sticky;
+  top: 0;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.flag {
+  width: 2rem;
+}
+
+.currency {
+  font-weight: bold;
+  color: var(--text-color-secondary);
+}
+
+.amount {
+  color: var(--text-color-primary);
+}

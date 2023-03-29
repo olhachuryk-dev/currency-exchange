@@ -1,0 +1,61 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.input,
+.select {
+  background-color: var(--background-color-primary);
+  border: 1px solid var(--background-color-secondary);
+  color: var(--text-color-primary);
+  font-size: 0.9rem;
+  height: 2rem;
+  outline: none;
+  resize: none;
+  transition: background-color 400ms;
+}
+
+@media (min-width: 375px) {
+  .input,
+  .select {
+    font-size: 1rem;
+    height: 3rem;
+  }
+}
+
+.input {
+  caret-color: var(--text-color-primary);
+  padding: 0 5px;
+  border-right: 0;
+  border-bottom-left-radius: var(--border-radius);
+  border-top-left-radius: var(--border-radius);
+}
+
+.input:focus,
+.select:focus {
+  transition: background-color 300ms;
+  background-color: var(--background-color-secondary);
+}
+
+.select {
+  border-bottom-right-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+  border-left: 0;
+  cursor: pointer;
+}
+
+.select::-webkit-scrollbar {
+  width: 10px; /* width of the entire scrollbar */
+}
+
+.select::-webkit-scrollbar-track {
+  background-color: var(--background-color-secondary);
+}
+
+.select::-webkit-scrollbar-thumb {
+  background-color: var(--background-color-primary);
+  border-radius: 20px;
+  border: 0;
+}

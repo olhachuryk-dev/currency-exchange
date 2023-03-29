@@ -1,38 +1,72 @@
-.App {
-  text-align: center;
+:root {
+  --border-radius: 7px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.theme_light {
+  --background-color-primary: hsl(0, 0%, 100%);
+  --background-color-secondary: hsl(0, 4%, 80%);
+  --background-color-semi-transparent: hsla(0, 0%, 100%, 0.5);
+  --background-image: linear-gradient(
+    to right top,
+    #051937,
+    #004d7a,
+    #008793,
+    #00bf72,
+    #a8eb12
+  );
+  --text-color-primary: hsl(0, 0%, 0%);
+  --text-color-secondary: hsl(235, 19%, 35%);
+  --text-color-accent: #004d7a;
+  --text-color-accent-hover: #008793;
+  --box-shadow: 10px 10px 45px 22px hsla(233, 11%, 84%, 0.6);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.theme_dark {
+  --background-color-primary: hsl(235, 24%, 19%);
+  --background-color-secondary: hsl(235, 21%, 11%);
+  --background-color-semi-transparent: hsla(235, 24%, 19%, 0.5);
+  --background-image: linear-gradient(
+    to left bottom,
+    #051937,
+    #004d7a,
+    #008793,
+    #00bf72,
+    #a8eb12
+  );
+  --text-color-primary: hsl(0, 0%, 100%);
+  --text-color-secondary: hsl(234, 11%, 52%);
+  --text-color-accent: #008793;
+  --text-color-accent-hover: #00bf72;
+  --box-shadow: 10px 10px 45px 22px rgba(0, 0, 0, 0.6);
 }
 
-.App-header {
-  background-color: #282c34;
+.app_container {
+  min-width: 100%;
   min-height: 100vh;
+  background-image: var(--background-image);
+  transition: all 300ms;
+}
+
+.main_container{
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.main_header {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-between;
+  margin: 20px;
+  font-size: 1.2rem;
+  font-weight: 700;
   color: white;
+  margin-left: 1rem;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.app_footer {
+  color: gainsboro;
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
 }

@@ -1,0 +1,23 @@
+.container{
+  background-color: var(--background-color-primary);
+  margin: 20px;
+  padding: 20px 0;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+.exchange_icon_container{
+  margin: 20px auto;
+  width: fit-content;
+}
+
+.exchange_icon{
+  color: var(--text-color-accent);
+  transition: 300ms;
+  cursor: pointer;
+}
+
+.exchange_icon:hover{
+  color: var(--text-color-accent-hover);
+  transition: 300ms;
+}
